@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Compiler
+{
+    public class Token
+    {
+        public int TokenCount { get; set; }
+        public string Name { get; set; }
+        public int Code { get; set; }
+        public int IdentifierCount { get; set; }
+    }
+}

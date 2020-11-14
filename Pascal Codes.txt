@@ -1,0 +1,8 @@
+program test;
+var
+    a, b, c : integer;
+begin // here codes begin
+    a := 1.5;
+    b := 2;
+    c := (a + b) * 2;
+end.

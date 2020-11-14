@@ -1,0 +1,37 @@
+Program Definition
+	〈Program〉→ program〈identifier〉;〈Program Body〉
+	〈Program Body〉→〈Var〉〈Code Block〉
+Var Definition
+	〈Var〉→ var〈Var Definition〉|ε
+	〈Var Definition〉→〈Identifier List〉：〈Type〉；｜〈Identifier List〉：〈Type〉；〈Var Definition〉
+	〈Identifier List〉→〈Identifier〉，〈Identifier List〉｜〈Identifier〉
+Sentence Definition
+	〈Code Block〉→ begin〈Sentence〉end
+	〈Sentence〉→〈Execution Sentence〉；〈Sentence〉｜〈Execution Sentence〉
+	〈Execution Sentence〉→〈Assignment Sentence〉｜〈Structure Sentence〉
+	〈Assignment Sentence〉→〈Identifier〉：＝〈Expression〉
+	〈Structure Sentence〉→〈Code Block〉｜〈If Statement〉｜〈While Statement〉
+	〈If Statement〉→ if〈Boolean Expression〉then〈Execution Sentence〉| if〈Boolean Expression〉then〈Execution Sentence〉else〈Execution Sentence〉
+	〈While Statement〉→ while〈Boolean Expression〉do〈Execution Sentence〉
+Expression Definition
+	〈Expression〉→〈Arithmetic Expression〉｜〈Boolean Expression〉
+	〈Arithmetic Expression〉→〈Arithmetic Expression〉＋〈Arithmetic Item〉｜〈Arithmetic Expression〉－〈Arithmetic Item〉｜〈Arithmetic Item〉
+	〈Arithmetic Item〉→〈Arithmetic Item〉＊〈Arithmetic Factor〉｜〈Arithmetic Item〉／〈Arithmetic Factor〉｜〈Arithmetic Factor〉
+	〈Arithmetic Factor〉→〈Arithmetic Value〉｜（〈Arithmetic Expression〉）
+	〈Arithmetic Value〉→〈Identifier〉｜〈Integer〉｜〈Real〉
+	〈Boolean Expression〉→〈Boolean Expression〉or〈Boolean Item〉｜〈Boolean Item〉
+	〈Boolean Item〉→〈Boolean Item〉and〈Boolean Factor〉｜〈Boolean Factor〉
+	〈Boolean Factor〉→ not〈Boolean Factor〉｜〈Boolean Value〉
+	〈Boolean Value〉→〈Boolean〉｜〈Identifier〉｜（〈Boolean Expression〉）｜〈Comparison Expression〉
+	〈Comparison Expression〉→〈Identifier〉〈Comparison Operator〉〈Identifier〉
+	〈Comparison Operator〉→〈 | 〈＝ | ＝| 〉＝ | 〉 | 〈〉
+Type Definition
+	〈Type〉→ integer｜bool | real
+Word Definition
+	〈Identifier〉→〈Alpha〉｜〈Identifier〉〈Alpha〉｜〈Identifier〉〈Numeric〉
+	〈Integer〉→〈Numeric〉｜〈Integer〉〈Numeric〉
+	〈Real〉→〈Integer〉.｜〈Real〉〈Numeric〉
+	〈Boolean〉→ true｜false
+Character Definition
+	〈Alpha〉→ A│B│C│D│E│F│G│H│I│J│K│L│M│N│O│P│Q│R│S│T│U│V│W│X│Y│Z│a│b│c│d│e│f│g│h│i│j│k│l│m│n│o│p│q│r│s│t│u│v│w│x│y│z
+	〈Numeric〉→ 0│1│2│3│4│5│6│7│8│9
