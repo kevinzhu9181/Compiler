@@ -24,7 +24,7 @@ Expression Definition
 	〈Boolean Factor〉→ not〈Boolean Factor〉｜〈Boolean Value〉
 	〈Boolean Value〉→〈Boolean〉｜〈Identifier〉｜（〈Boolean Expression〉）｜〈Comparison Expression〉
 	〈Comparison Expression〉→〈Identifier〉〈Comparison Operator〉〈Identifier〉
-	〈Comparison Operator〉→〈 | 〈＝ | ＝| 〉＝ | 〉 | 〈〉
+	〈Comparison Operator〉→ < | <= | ＝ | >= | > | <>
 Type Definition
 	〈Type〉→ integer｜bool | real
 Word Definition
