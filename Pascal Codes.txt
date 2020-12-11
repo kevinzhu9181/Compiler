@@ -1,8 +1,12 @@
 program test;
 var
     a, b, c : integer;
+    d : real;
 begin // here codes begin
     a := 1.5;
+    while (a < 10)
+    do
+        a := a + 1;
     b := 2;
-    c := (a + b) * 2;
+    c := (a + b) * 2
 end.

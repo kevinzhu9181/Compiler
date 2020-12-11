@@ -345,9 +345,10 @@ namespace Compiler
                 if (Tokens[i].Code == 34 || Tokens[i].Code == 33 || Tokens[i].Code == 32 || Tokens[i].Code == 37 || Tokens[i].Code == 36 || Tokens[i].Code == 35)
                 {
                     Next();
-                    if (Tokens[i].Code != 18)
+                    // Identifier/ Integer Input/ Real Input
+                    if (Tokens[i].Code != 18 && Tokens[i].Code != 19 && Tokens[i].Code != 20)
                     {
-                        error = "Identifier Is Missing After Comparison Sign!";
+                        error = "Identifier/ Integer Input/ Real Input Is Missing After Comparison Sign!";
                     }
                 }
                 else
