@@ -20,7 +20,7 @@ namespace Compiler
         public FrmCompiler()
         {
             InitializeComponent();
-            inputString = File.ReadAllText(@"C:\Users\Kevin\Desktop\CPT\Courses\CISC603 Theory of Computation\Compiler\Pascal Codes.txt");
+            inputString = File.ReadAllText(@"..\..\Pascal Codes.txt");
             formattedOutputString = "";
         }
 
